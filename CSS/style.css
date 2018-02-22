@@ -1,0 +1,73 @@
+body{
+    height: 100%;
+    background-color: red;
+    
+}
+@media only screen
+and (min-width: 961px)
+and (orientation: landscape){
+   
+    #wrapper {
+        margin: 0px auto;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 98%;
+        width: 99%;
+        background-color: blue;
+        position: absolute;
+    }
+
+    #header {
+        width: 100%;
+        height: 15%;
+        background-color: green;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        display: block;
+    }
+        
+    #logo {
+        width: 25%;
+        height: 100%;
+        display: block;
+        margin-left: auto;
+        margin-left: 2.5%;
+        margin-right: auto;
+        float: left;
+    }
+    
+    #buttons {
+        float: right;
+        width: 25%;
+        background-color: purple;
+        display: block;
+        height: 80%;
+        margin-top: 0.6%;
+        margin-bottom: 10%;
+        position: relative;
+    }
+    
+    .knap {
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 6%;
+        background-color: yellow;
+        font-size: 1.3em;
+        display: inline-block;
+    }
+    
+    #menu {
+        width: 90%;
+        height: 5%;
+        position: absolute;
+        margin-left: 5%;
+        margin-right: auto;
+        margin-top: 7.5%;
+        display: block;
+        background-color: purple;
+    }
+    
+}
+   
