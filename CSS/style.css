@@ -66,7 +66,18 @@ and (orientation: landscape){
         margin-right: auto;
         margin-top: 7.5%;
         display: block;
-        background-color: purple;
+        background-color: red;
+    }
+    
+    #content{
+        width: 90%;
+        height: 5%;
+        position: absolute;
+        margin-left: 5%;
+        margin-right: auto;
+        margin-top: 10%;
+        display: block;
+        background-color: purple;       
     }
     
 }
