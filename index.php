@@ -149,8 +149,8 @@ if(!isset($_SESSION['ID'])){
                     echo $_SESSION['USER'];
                     print '<div id="buttons">';
                     print '<input type="button" value="Log ud" onclick=window.location.href="PHP/Log_ud.php" class="knap">';
-                    print '<input type="button" value="Ønskeliste" onclick=window.location.href="index.php" class="knap">';
-                    print '<input type="button" value="Kurv" onclick=window.location.href="index.php" class="knap">';
+                    print '<input type="button" value="Ønskeliste" onclick=window.location.href="PHP/Wish_list.php" class="knap">';
+                    print '<input type="button" value="Kurv" onclick=window.location.href="PHP/Check_out.php" class="knap">';
                     print '</div>';
                 }
                 else{

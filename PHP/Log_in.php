@@ -11,7 +11,7 @@
       <form action="Log_in_kode.php" method="POST">
         <fieldset>
             <input type="text" placeholder="Skriv brugernavn" name="username">
-            <input type="text" placeholder="Skriv kodeord" name="password">
+            <input type="password" placeholder="Skriv kodeord" name="password">
         </fieldset>
         <fieldset>
             <input type="submit" value="Log in">
