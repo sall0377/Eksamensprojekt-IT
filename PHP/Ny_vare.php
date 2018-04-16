@@ -15,11 +15,7 @@
         </fieldset>
         <fieldset>
           <input type="submit" value="Opret vare">
-            
         </fieldset>
       </form>
-    
-
   </body>
-
 </html>

@@ -17,6 +17,7 @@
     }
 
     $mysqli->close();
+
     header('location:../index.php');
 
 ?>

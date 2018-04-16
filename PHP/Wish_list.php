@@ -38,14 +38,14 @@ if(!isset($_SESSION['wlID'])){
 				print '</table>';
 				$results->free ();
 				$mysqli->close ();
-			} else {
+			} 
+            else {
 				echo "Der er ingen vare på ønskelisten endnu";
 			}
-      if(count($_SESSION['wlID'])>0){
+            
+            if(count($_SESSION['wlID'])>0){
                 print '<input type="button" value="Ryd ønskeliste" onclick=window.location.href="tom_wl.php" class="knap">';
             }
-			?>
-
+    ?>
   </body>
-
 </html>

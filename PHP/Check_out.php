@@ -24,40 +24,39 @@ if(!isset($_SESSION['ID'])){
 				$Antal = array ();
 				for($i = 0; $i < count ( $_SESSION ['ID'] ); ++ $i) {
 					array_push ( $Antal, $_SESSION ['Antal'] [$i] );
-				}				
-				$ialt = 0;
-				$i = 0;
-				include_once 'Connect.php';
-				$query = "SELECT * FROM products WHERE ID IN(".implode(',', $_SESSION['ID']) . ")";
-				$results = $mysqli->query ( $query );
-				print '<table class="oversigt">';
-				print '<td>Vare</td>';
-				print '<td>Pris</td>';
-				print '<td>Antal</td>';
-				while ( $row = $results->fetch_array () ) {
-					print '<form action="Put_i_kurv.php" method="post"><tr>';
-					print '<input type="hidden" name="ID" value="' . $row ["ID"] . '">';
-					print '<td><input style="width:90%;" type="text" name="Name" 
-                    value="' . utf8_encode ( $row ["Name"] ) . '" disabled class="breddeoversigt"></td>';
-					print '<td><input style="width:90%;" type="text" name="Price" 
-                    value="' . $row ["Price"] . ' kr." disabled class="breddeoversigt"></td>';
-					print '<td><input style="width:90%;" type="text" name="Antal" id="Antal" 
-                    value="' . $Antal [$i] . '" disabled class="breddeoversigt"></td>';
-					$ialt = $ialt + str_replace ( "'", '', $row ['Price'] ) * $Antal [$i];
-					$i ++;
-					print '</form></tr>';
-				}
-				print '<td></td>';
-				print '<td>Ialt:</td>';
-				print '<td><input type="hidden" name="beloeb" id="beloeb" value="' . $ialt . '">' . $ialt . ' kr.</td>';
-				print '</table>';
-				$results->free ();
-				$mysqli->close ();
-			} else {
-				echo "Der er ingen vare i indøbskurven endnu";
-			}
-			?>
-
+            }				
+            $ialt = 0;
+            $i = 0;
+            include_once 'Connect.php';
+            $query = "SELECT * FROM products WHERE ID IN(".implode(',', $_SESSION['ID']) . ")";
+            $results = $mysqli->query ( $query );
+            print '<table class="oversigt">';
+            print '<td>Vare</td>';
+            print '<td>Pris</td>';
+            print '<td>Antal</td>';
+            while ( $row = $results->fetch_array () ) {
+                print '<form action="Put_i_kurv.php" method="post"><tr>';
+                print '<input type="hidden" name="ID" value="' . $row ["ID"] . '">';
+                print '<td><input style="width:90%;" type="text" name="Name" 
+                value="' . utf8_encode ( $row ["Name"] ) . '" disabled class="breddeoversigt"></td>';
+                print '<td><input style="width:90%;" type="text" name="Price" 
+                value="' . $row ["Price"] . ' kr." disabled class="breddeoversigt"></td>';
+                print '<td><input style="width:90%;" type="text" name="Antal" id="Antal" 
+                value="' . $Antal [$i] . '" disabled class="breddeoversigt"></td>';
+                $ialt = $ialt + str_replace ( "'", '', $row ['Price'] ) * $Antal [$i];
+                $i ++;
+                print '</form></tr>';
+            }
+            print '<td></td>';
+            print '<td>Ialt:</td>';
+            print '<td><input type="hidden" name="beloeb" id="beloeb" value="' . $ialt . '">' . $ialt . ' kr.</td>';
+            print '</table>';
+            $results->free ();
+            $mysqli->close ();
+            } 
+            else {
+            echo "Der er ingen vare i indøbskurven endnu";
+            }
+    ?>
   </body>
-
 </html>

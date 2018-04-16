@@ -14,12 +14,8 @@
             <input type="text" placeholder="Skriv kodeord" name="password">
         </fieldset>
         <fieldset>
-          <input type="submit" value="Opret bruger">
-            
+          <input type="submit" value="Opret bruger"> 
         </fieldset>
       </form>
-    
-
   </body>
-
 </html>

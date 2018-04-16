@@ -14,8 +14,7 @@
             <input type="text" placeholder="Skriv kodeord" name="password">
         </fieldset>
         <fieldset>
-          <input type="submit" value="Log in">
-            
+            <input type="submit" value="Log in">
         </fieldset>
       </form>
     
