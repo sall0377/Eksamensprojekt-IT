@@ -7,12 +7,15 @@
 
     $password=$_POST['password'];
     
-    $result=$mysqli->query("SELECT username, password FROM users WHERE username='$username' AND password='$password'"); //Tester om brugeren og kodeordet findes
+    //Tester om brugeren og kodeordet findes
+    $result=$mysqli->query("SELECT username, password FROM users WHERE username='$username' AND password='$password'"); 
 
     $row=mysqli_fetch_array($result);
         
     if (!$row){
-        echo "<script>alert('Brugernavn eller kodeord er forkert');</script>";
+        echo "<script>alert('Brugernavn eller kodeord er forkert');
+        window.location.href='Log_in.php';
+        </script>";
     }
     else {
         $_SESSION['USER']=$username;

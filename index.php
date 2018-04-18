@@ -1,6 +1,7 @@
 <?php
-session_start(); //Vi starter en session, der følger en mens browseren er åben
-//Hvis vi ikke allerede har en session laver vi en tomme
+//Vi starter en session, der følger en mens browseren er åben
+session_start(); 
+//Hvis vi ikke allerede har en session laver vi en tom
 if(!isset($_SESSION['ID'])){
     $ID=array();
     $_SESSION['ID']=$ID;
@@ -10,6 +11,7 @@ if(!isset($_SESSION['ID'])){
     $_SESSION['wlID']=$wlID;
 }
 ?>
+
 <!doctype html>
 <html lang="en">
 

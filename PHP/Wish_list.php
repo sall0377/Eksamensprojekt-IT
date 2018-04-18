@@ -28,10 +28,8 @@ if(!isset($_SESSION['wlID'])){
 				while ( $row = $results->fetch_array () ) {
 					print '<form action="til_wl.php" method="post"><tr>';
 					print '<input type="hidden" name="wlID" value="' . $row ["ID"] . '">';
-					print '<td><input style="width:90%;" type="text" name="Name" 
-                    value="' . utf8_encode ( $row ["Name"] ) . '" disabled class="breddeoversigt"></td>';
-					print '<td><input style="width:90%;" type="text" name="Price" 
-                    value="' . $row ["Price"] . ' kr." disabled class="breddeoversigt"></td>';
+					print '<td><input style="width:90%;" type="text" name="Name" value="' . utf8_encode ( $row ["Name"] ) . '" disabled class="breddeoversigt"></td>';
+					print '<td><input style="width:90%;" type="text" name="Price" value="' . $row ["Price"] . ' kr." disabled class="breddeoversigt"></td>';
 					print '</form></tr>';
 				}
 				print '<td></td>';
@@ -49,3 +47,4 @@ if(!isset($_SESSION['wlID'])){
     ?>
   </body>
 </html>
+

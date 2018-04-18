@@ -10,7 +10,9 @@
 
     //Tester om brugeren findes    
     if(mysqli_num_rows($result)>0){
-        echo "Brugeren findes allerede";
+        echo "<script>alert('Brugeren findes allerede');
+           window.location.href='Sign_up.php';
+           </script>";
     }
     else {
         $insert_row=$mysqli->query("INSERT INTO users (username, password) VALUES ($convertusername, $convertpassword)");

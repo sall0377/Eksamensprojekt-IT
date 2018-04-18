@@ -7,7 +7,6 @@ if(!isset($_SESSION['ID'])){
     $_SESSION['Antal']=$Antal;
 }
 ?>
-
 <!doctype html>
 <html lang="en">
 
@@ -16,9 +15,7 @@ if(!isset($_SESSION['ID'])){
     <title>Kurv</title>
     <link rel="stylesheet" href="/css/main.css">
   </head>
-
   <body>
-
     <?php
 			if (count($_SESSION['ID'])>0){
 				$Antal = array ();
@@ -37,12 +34,9 @@ if(!isset($_SESSION['ID'])){
             while ( $row = $results->fetch_array () ) {
                 print '<form action="Put_i_kurv.php" method="post"><tr>';
                 print '<input type="hidden" name="ID" value="' . $row ["ID"] . '">';
-                print '<td><input style="width:90%;" type="text" name="Name" 
-                value="' . utf8_encode ( $row ["Name"] ) . '" disabled class="breddeoversigt"></td>';
-                print '<td><input style="width:90%;" type="text" name="Price" 
-                value="' . $row ["Price"] . ' kr." disabled class="breddeoversigt"></td>';
-                print '<td><input style="width:90%;" type="text" name="Antal" id="Antal" 
-                value="' . $Antal [$i] . '" disabled class="breddeoversigt"></td>';
+                print '<td><input style="width:90%;" type="text" name="Name" value="' . utf8_encode ( $row ["Name"] ) . '" disabled class="breddeoversigt"></td>';
+                print '<td><input style="width:90%;" type="text" name="Price" value="' . $row ["Price"] . ' kr." disabled class="breddeoversigt"></td>';
+                print '<td><input style="width:90%;" type="text" name="Antal" id="Antal" value="' . $Antal [$i] . '" disabled class="breddeoversigt"></td>';
                 $ialt = $ialt + str_replace ( "'", '', $row ['Price'] ) * $Antal [$i];
                 $i ++;
                 print '</form></tr>';
@@ -55,8 +49,7 @@ if(!isset($_SESSION['ID'])){
             $mysqli->close ();
             } 
             else {
-            echo "Der er ingen vare i indøbskurven endnu";
-            }
-    ?>
+            echo "Der er ingen vare i inkøbskurven endnu";
+            } ?>
   </body>
 </html>
